@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div>
+        <p>Revenue View</p>
+        <h1>Sales Dashboard</h1>
+      </div>
+      <select id="region">
+        <option value="all">All Regions</option>
+        <option value="North">North</option>
+        <option value="South">South</option>
+        <option value="West">West</option>
+        <option value="East">East</option>
+      </select>
+    </header>
+
+    <section class="kpis">
+      <article><span>Total Sales</span><strong id="totalSales">$0</strong></article>
+      <article><span>Orders</span><strong id="orders">0</strong></article>
+      <article><span>Avg Order</span><strong id="avgOrder">$0</strong></article>
+      <article><span>Top Product</span><strong id="topProduct">-</strong></article>
+    </section>
+
+    <section class="grid">
+      <article class="chart"><h2>Monthly Sales</h2><canvas id="monthlyChart"></canvas></article>
+      <article class="chart"><h2>Sales by Category</h2><canvas id="categoryChart"></canvas></article>
+      <article class="chart"><h2>Regional Revenue</h2><canvas id="regionChart"></canvas></article>
+      <article class="chart"><h2>Product Units</h2><canvas id="productChart"></canvas></article>
+      <article class="chart"><h2>Profit Trend</h2><canvas id="profitChart"></canvas></article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analytics Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p>Analysis Studio</p>
+        <h1>Data Analytics Tool</h1>
+      </div>
+      <button id="exportCsv">Export CSV</button>
+    </header>
+
+    <section class="toolbar">
+      <input id="search" type="search" placeholder="Search product or segment">
+      <select id="segment">
+        <option value="all">All Segments</option>
+        <option value="Consumer">Consumer</option>
+        <option value="Business">Business</option>
+        <option value="Enterprise">Enterprise</option>
+      </select>
+      <select id="sort">
+        <option value="revenue">Sort by Revenue</option>
+        <option value="growth">Sort by Growth</option>
+        <option value="margin">Sort by Margin</option>
+      </select>
+    </section>
+
+    <section class="features">
+      <article><span>1. Total Revenue</span><strong id="totalRevenue">$0</strong></article>
+      <article><span>2. Avg Margin</span><strong id="avgMargin">0%</strong></article>
+      <article><span>3. Best Growth</span><strong id="bestGrowth">-</strong></article>
+      <article><span>4. Forecast</span><strong id="forecast">$0</strong></article>
+      <article><span>5. Rows Shown</span><strong id="rowsShown">0</strong></article>
+    </section>
+
+    <section class="workspace">
+      <article class="visual">
+        <h2>6. Revenue Comparison</h2>
+        <canvas id="barChart"></canvas>
+      </article>
+      <article class="visual">
+        <h2>7. Growth vs Margin</h2>
+        <canvas id="scatterChart"></canvas>
+      </article>
+    </section>
+
+    <section class="table-wrap">
+      <div class="table-head">
+        <h2>8. Interactive Data Table</h2>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Segment</th>
+              <th>Revenue</th>
+              <th>Growth</th>
+              <th>Margin</th>
+              <th>Risk</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="insight-card">
+        <span>9. Auto Insight</span>
+        <strong id="insight">Auto insight appears here.</strong>
+      </article>
+      <article class="compare-card">
+        <span>10. Product Comparison</span>
+        <div class="compare-controls">
+          <select id="compareA" aria-label="First product"></select>
+          <select id="compareB" aria-label="Second product"></select>
+        </div>
+        <div id="compareResult" class="compare-result"></div>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
